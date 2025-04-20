@@ -210,13 +210,13 @@ class _LinkBottomSheetState extends State<LinkBottomSheet> {
                     if (value == null || value.isEmpty) {
                       return 'Please enter a URL';
                     }
-                    // final pattern =
-                    //     r'^(https?:\/\/)?([\w\-]+\.)+[\w]{2,}(\/\S*)?$';
-                    // final regex = RegExp(pattern);
+                    final pattern =
+                        r'^(https?:\/\/)?([\w\-]+\.)+[\w]{2,}(\/\S*)?$';
+                    final regex = RegExp(pattern);
 
-                    // if (!regex.hasMatch(value.trim())) {
-                    //   return 'Please enter a valid URL';
-                    // }
+                    if (!regex.hasMatch(value.trim())) {
+                      return 'Please enter a valid URL';
+                    }
                     return null;
                   },
                 ),

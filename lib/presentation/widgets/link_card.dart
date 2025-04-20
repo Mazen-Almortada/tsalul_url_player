@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:tsalul_url_player/core/theme/app_theme.dart';
+import 'package:tsalul_url_player/data/models/stream_model.dart';
 import 'package:tsalul_url_player/domain/entities/link_entity.dart';
+import 'package:tsalul_url_player/presentation/screens/video_player_screen.dart';
 import 'package:tsalul_url_player/presentation/widgets/link_bottom_sheet.dart';
 
 class LinkCard extends StatelessWidget {
@@ -77,8 +79,25 @@ class LinkCard extends StatelessWidget {
 
   void _playLink(BuildContext context) {
     // Placeholder: Implement actual link opening or playback
-    ScaffoldMessenger.of(
+    Navigator.push(
       context,
-    ).showSnackBar(SnackBar(content: Text('Opening ${link.url}')));
+      MaterialPageRoute(
+        builder:
+            (context) => VideoPlayerScreen(
+              streams: [
+                StreamQuality(
+                  name: link.title,
+                  url: link.url,
+                  urlType: 3,
+                  userAgent: "",
+                  referer: "",
+                  eventChannelId: 0,
+                  headers: {},
+                ),
+              ],
+              fullScreenByDefault: true,
+            ),
+      ),
+    );
   }
 }
