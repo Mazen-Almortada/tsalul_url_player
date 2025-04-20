@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:tsalul_url_player/core/services/service_locator.dart';
 import 'package:tsalul_url_player/core/theme/app_theme.dart';
 import 'package:tsalul_url_player/core/utils/receive_intent.dart';
@@ -9,9 +10,11 @@ import 'package:tsalul_url_player/presentation/bloc/link_bloc/link_bloc.dart';
 import 'package:tsalul_url_player/presentation/screens/home_screen.dart';
 import 'package:tsalul_url_player/presentation/screens/splash_screen.dart';
 import 'package:tsalul_url_player/presentation/screens/video_player_screen.dart';
+// import 'package:tsalul_url_player/core/theme/app_theme.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await MobileAds.instance.initialize();
 
   await initServiceLocator();
   final streamList = await receiveIntentQualities();
@@ -57,3 +60,10 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+        // fontFamily: 'Poppins',
+
+// i want home screen page it is has app bar without background color 
+// and elevetion and in it put TUP center 
+
+// in body i want show list items 
+// in beautiful design 

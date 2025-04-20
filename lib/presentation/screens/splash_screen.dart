@@ -11,31 +11,31 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen>
     with SingleTickerProviderStateMixin {
-  late AnimationController _controller;
-  late Animation<double> _animation;
+  // late AnimationController _controller;
+  // late Animation<double> _animation;
 
   @override
   void initState() {
     super.initState();
 
-    _controller = AnimationController(
-      duration: const Duration(seconds: 2),
-      vsync: this,
-    );
+    // _controller = AnimationController(
+    //   duration: const Duration(seconds: 2),
+    //   vsync: this,
+    // );
 
-    _animation = CurvedAnimation(parent: _controller, curve: Curves.easeIn);
+    // _animation = CurvedAnimation(parent: _controller, curve: Curves.easeIn);
 
-    _controller.forward();
-    _animation.addStatusListener((status) {
-      if (status == AnimationStatus.completed) {
-        Navigator.pushReplacementNamed(context, '/home');
-      }
-    });
+    // _controller.forward();
+    // _animation.addStatusListener((status) {
+    //   if (status == AnimationStatus.completed) {
+    //     Navigator.pushReplacementNamed(context, '/home');
+    //   }
+    // });
   }
 
   @override
   void dispose() {
-    _controller.dispose();
+    // _controller.dispose();
     super.dispose();
   }
 
@@ -56,6 +56,9 @@ class _SplashScreenState extends State<SplashScreen>
               // const SizedBox(height: 20),
               // Typing animation with color change
               AnimatedTextKit(
+                onFinished: () {
+                  Navigator.pushReplacementNamed(context, '/home');
+                },
                 animatedTexts: [
                   TypewriterAnimatedText(
                     'Tsalul URL Player',
@@ -67,8 +70,6 @@ class _SplashScreenState extends State<SplashScreen>
                 totalRepeatCount: 1,
                 displayFullTextOnTap: true,
               ),
-
-              // Loading indicator
             ],
           ),
         ),

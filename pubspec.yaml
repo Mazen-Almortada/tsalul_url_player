@@ -43,6 +43,9 @@ dependencies:
   path: ^1.9.1
   get_it: ^8.0.3
   shared_preferences: ^2.5.3
+  awesome_video_player:
+    path: packages/awesome_video_player
+  google_mobile_ads: ^6.0.0
 
 dev_dependencies:
   flutter_test:
