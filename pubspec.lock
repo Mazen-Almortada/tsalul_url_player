@@ -44,9 +44,11 @@ packages:
   awesome_video_player:
     dependency: "direct main"
     description:
-      path: "packages/awesome_video_player"
-      relative: true
-    source: path
+      path: "."
+      ref: main
+      resolved-ref: "67126831d62a9810df29d882fb9d275d682f3378"
+      url: "https://github.com/Mazen-Almortada/awesome_video_player.git"
+    source: git
     version: "1.0.4"
   bloc:
     dependency: transitive
