@@ -1,16 +1,26 @@
-# tsalul_url_player
+# Tsalul URL Player
 
-A new Flutter project.
+A Flutter video player application that streams content from various URL sources with advanced playback controls.
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+## Features
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- 🎥 Play videos from network URLs
+- 🔍 Search functionality for content
+- ⏯️ Playback controls (play/pause, seek forward/backward)
+- 🔊 Volume control and mute toggle
+- 🏎️ Adjustable playback speed
+- 🖥️ Fullscreen mode support
+- 📶 Quality selection for adaptive streams
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Installation
+
+### Prerequisites
+- Flutter SDK
+- Dart SDK
+
+### Steps
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Mazen-Almortada/tsalul-url-player.git
